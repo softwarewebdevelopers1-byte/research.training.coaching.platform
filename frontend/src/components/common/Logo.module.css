@@ -1,0 +1,38 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  text-decoration: none;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-lg);
+  letter-spacing: var(--ls-tight);
+}
+
+.mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-md);
+  font-size: 0.7rem;
+  font-weight: var(--fw-semibold);
+}
+
+.dark .mark {
+  background-color: var(--color-primary);
+  color: var(--color-inverse-text);
+}
+
+.dark .text {
+  color: var(--color-text);
+}
+
+.light .mark {
+  background-color: var(--color-inverse-text);
+  color: var(--color-primary);
+}
+
+.light .text {
+  color: var(--color-inverse-text);
+}

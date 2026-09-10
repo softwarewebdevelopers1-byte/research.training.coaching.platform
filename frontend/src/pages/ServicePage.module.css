@@ -1,0 +1,121 @@
+.section {
+  padding: var(--section-y) 0;
+}
+
+.sectionAlt {
+  background-color: var(--color-surface);
+}
+
+.layout {
+  display: grid;
+  gap: var(--space-10);
+}
+
+.columnTitle {
+  margin-bottom: var(--space-6);
+}
+
+.featureGrid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-6);
+}
+
+.featureItem {
+  padding: var(--space-6);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-background);
+}
+
+.featureTitle {
+  font-size: var(--fs-md);
+  margin-bottom: var(--space-2);
+}
+
+.featureDescription {
+  margin: 0;
+  font-size: var(--fs-sm);
+}
+
+.audienceList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-5);
+}
+
+.audienceItem {
+  border-left: 3px solid var(--color-secondary);
+  padding-left: var(--space-5);
+}
+
+.audienceLabel {
+  display: block;
+  font-weight: var(--fw-semibold);
+  color: var(--color-text);
+  margin-bottom: var(--space-1);
+}
+
+.audienceDesc {
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+}
+
+.processList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-6);
+  counter-reset: step;
+}
+
+.processItem {
+  position: relative;
+  padding-left: var(--space-12);
+  counter-increment: step;
+}
+
+.processItem::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-primary);
+  color: var(--color-inverse-text);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+}
+
+.processTitle {
+  font-size: var(--fs-md);
+  margin-bottom: var(--space-2);
+}
+
+.processDesc {
+  margin: 0;
+  font-size: var(--fs-sm);
+}
+
+@media (min-width: 768px) {
+  .featureGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .layout {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-16);
+  }
+  .processList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

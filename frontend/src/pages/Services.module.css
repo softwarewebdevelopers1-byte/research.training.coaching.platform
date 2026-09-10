@@ -1,0 +1,35 @@
+.hero {
+  padding: clamp(3rem, 7vw, 5rem) 0 clamp(2rem, 4vw, 3rem);
+  background: linear-gradient(
+    180deg,
+    var(--color-background) 0%,
+    var(--color-surface) 100%
+  );
+}
+
+.title {
+  font-size: var(--fs-2xl);
+  max-width: 780px;
+  margin-bottom: var(--space-4);
+}
+
+.subtitle {
+  font-size: var(--fs-md);
+  max-width: 640px;
+  margin: 0;
+}
+
+.section {
+  padding: var(--section-y) 0;
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-6);
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

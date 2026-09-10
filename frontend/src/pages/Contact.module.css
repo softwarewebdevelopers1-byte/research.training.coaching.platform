@@ -1,0 +1,132 @@
+.hero {
+  padding: clamp(3rem, 7vw, 5rem) 0 clamp(2rem, 4vw, 3rem);
+  background: linear-gradient(
+    180deg,
+    var(--color-background) 0%,
+    var(--color-surface) 100%
+  );
+}
+
+.title {
+  font-size: var(--fs-2xl);
+  max-width: 720px;
+  margin-bottom: var(--space-4);
+}
+
+.subtitle {
+  font-size: var(--fs-md);
+  max-width: 620px;
+  margin: 0;
+}
+
+.section {
+  padding: var(--section-y) 0;
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-12);
+}
+
+.info {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+}
+
+.infoTitle {
+  font-size: var(--fs-lg);
+  margin-bottom: var(--space-6);
+}
+
+.infoList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.infoList li {
+  display: flex;
+  gap: var(--space-4);
+  align-items: flex-start;
+  color: var(--color-secondary);
+}
+
+.infoList li > div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.infoLabel {
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-wide);
+  color: var(--color-text-muted);
+  font-weight: var(--fw-semibold);
+}
+
+.infoValue {
+  color: var(--color-text);
+  font-size: var(--fs-sm);
+}
+
+.infoLink {
+  color: var(--color-primary);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+}
+
+.infoLink:hover {
+  color: var(--color-secondary);
+}
+
+.socialBlock {
+  margin-top: var(--space-8);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.socialList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-5);
+}
+
+.formWrapper {
+  background-color: var(--color-background);
+}
+
+.mapSection {
+  padding-bottom: var(--section-y);
+}
+
+.mapWrapper {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  aspect-ratio: 16 / 9;
+}
+
+.mapWrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: var(--space-16);
+    align-items: start;
+  }
+}

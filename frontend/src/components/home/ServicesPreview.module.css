@@ -1,0 +1,15 @@
+.section {
+  padding: var(--section-y) 0;
+  background-color: var(--color-surface);
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-6);
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

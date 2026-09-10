@@ -1,0 +1,19 @@
+.wrapper {
+  max-width: 720px;
+  margin-bottom: var(--space-10);
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.title {
+  margin-bottom: var(--space-4);
+}
+
+.description {
+  font-size: var(--fs-md);
+  margin: 0;
+}
